@@ -1,15 +1,13 @@
-![phaser3-parceljs-template](https://user-images.githubusercontent.com/2236153/71606463-37a0da80-2b2e-11ea-9b5f-5d26ccc84f91.png)
-
-# Phaser 3 + TypeScript + Parcel Template
+# Phaser 3 + TypeScript + Webpack 5 Template
 > For people who want to spend time making Phaser 3 games in TypeScript instead of configuring build tools.
 
 ![License](https://img.shields.io/badge/license-MIT-green)
 
-This is a TypeScript specific fork of [phaser3-parcel-template](https://github.com/ourcade/phaser3-parcel-template).
+This is a fork of [phaser3-parcel-template](https://github.com/ourcade/phaser3-parcel-template).
 
 ## Prerequisites
 
-You'll need [Node.js](https://nodejs.org/en/), [npm](https://www.npmjs.com/), and [Parcel](https://parceljs.org/) installed.
+You'll need [Node.js](https://nodejs.org/en/), [npm](https://www.npmjs.com/), and [Webpack](https://webpack.js.org/) installed.
 
 It is highly recommended to use [Node Version Manager](https://github.com/nvm-sh/nvm) (nvm) to install Node.js and npm.
 
@@ -25,32 +23,13 @@ nvm use node
 
 Replace 'node' with 'latest' for `nvm-windows`.
 
-Then install Parcel:
+Then install packages:
 
 ```bash
-npm install -g parcel-bundler
+npm install
 ```
 
 ## Getting Started
-
-Clone this repository to your local machine:
-
-```bash
-git clone https://github.com/ourcade/phaser3-typescript-parcel-template.git
-```
-
-This will create a folder named `phaser3-typescript-parcel-template`. You can specify a different folder name like this:
-
-```bash
-git clone https://github.com/ourcade/phaser3-typescript-parcel-template.git my-folder-name
-```
-
-Go into your new project folder and install dependencies:
-
-```bash
-cd phaser3-typescript-parcel-template # or 'my-folder-name'
-npm install
-```
 
 Start development server:
 
@@ -91,7 +70,7 @@ Other than that there is no opinion on how you should structure your project. Th
 
 ## Static Assets
 
-Any static assets like images or audio files should be placed in the `public` folder. It'll then be served at http://localhost:8000/images/my-image.png
+Any static assets like images or audio files should be placed in the `public` folder. It'll then be served at http://localhost:5001/images/my-image.png
 
 Example `public` structure:
 
@@ -115,22 +94,12 @@ It does not aim to be opinionated.
 
 ## Dev Server Port
 
-You can change the dev server's port number by modifying the `start` script in `package.json`. We use Parcel's `-p` option to specify the port number.
-
-The script looks like this:
-
-```
-parcel src/index.html -p 8000
-```
-
-Change 8000 to whatever you want.
+You can change the dev server's port number by modifying the port number in the `webpack.config.js`. The port is set on `5001`.
 
 ## Other Notes
 
-[parcel-plugin-clean-easy](https://github.com/lifuzhao100/parcel-plugin-clean-easy) is used to ensure only the latest files are in the `dist` folder. You can modify this behavior by changing `parcelCleanPaths` in `package.json`.
-
-[parcel-plugin-static-files](https://github.com/elwin013/parcel-plugin-static-files-copy#readme) is used to copy static files from `public` into the output directory and serve it. You can add additional paths by modifying `staticFiles` in `package.json`.
+No other notes. Unless you have one.
 
 ## License
 
-[MIT License](https://github.com/ourcade/phaser3-typescript-parcel-template/blob/master/LICENSE)
+[MIT License](https://github.com/Alt148/phaser3-webpack-template/blob/master/LICENSE)
