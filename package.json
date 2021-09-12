@@ -1,37 +1,31 @@
 {
-	"name": "phaser3-parcel-template",
+	"name": "phaser3-webpack-template",
 	"version": "1.0.0",
-	"description": "A typescript template project for Phaser 3 using Parceljs",
+	"description": "A typescript template project for Phaser 3 using Webpack",
 	"scripts": {
-		"start": "parcel src/index.html -p 8000",
-		"build": "parcel build src/index.html --out-dir dist",
+		"start": "webpack serve --mode development",
+		"build": "webpack --mode production",
 		"test": "echo \"Error: no test specified\" && exit 1",
 		"lint": "eslint ./src --ext .js,.jsx,.ts,.tsx"
 	},
-	"author": "supertommy",
+	"author": "Alt148",
 	"license": "MIT",
-	"repository": {
-		"type": "git",
-		"url": "https://github.com/ourcade/phaser3-parcel-template.git"
-	},
-	"homepage": "https://github.com/ourcade/phaser3-parcel-template",
+	"homepage": "",
 	"devDependencies": {
 		"@typescript-eslint/eslint-plugin": "^2.29.0",
 		"@typescript-eslint/parser": "^2.29.0",
+		"clean-webpack-plugin": "^4.0.0",
+		"copy-webpack-plugin": "^8.1.1",
 		"eslint": "^6.8.0",
-		"minimist": ">=1.2.2",
-		"parcel-plugin-clean-easy": "^1.0.2",
-		"parcel-plugin-static-files-copy": "^2.4.3",
-		"typescript": "^3.8.3"
+		"file-loader": "^6.2.0",
+		"html-webpack-plugin": "^5.3.1",
+		"ts-loader": "^9.2.5",
+		"typescript": "^3.8.3",
+		"webpack": "^5.52.1",
+		"webpack-cli": "^4.8.0",
+		"webpack-dev-server": "^3.11.2"
 	},
 	"dependencies": {
 		"phaser": "^3.55.2"
-	},
-	"parcelCleanPaths": [
-		"dist"
-	],
-	"staticFiles": {
-		"staticPath": "public",
-		"watcherGlob": "**"
 	}
 }
